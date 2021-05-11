@@ -1,0 +1,113 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #4c4c4c;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  width: 212px;
+  height: 212px;
+  border-radius: 50%;
+  background-color: #242424;
+  border: 8px solid #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.swatch {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px white dotted;
+  
+}
+
+.date {
+  font-size: 13px;
+}
+
+.hour {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.health {
+  display: flex;
+  font-size: 12px;
+}
+
+.pulse {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.heart {
+  margin-right: 8px;
+  color: #f85b5b;
+  animation: pulse 1s ease-in-out 0s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: scaleX(1.2) scaleY(1.2);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+.round {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 210px;
+  height: 210px;
+}
+
+.round-circle {
+  transform-origin: center;
+  transform: rotate(270.5deg);
+  animation: go-round 60s linear 0s infinite both;
+}
+
+@keyframes go-round {
+  0% {
+    stroke-dasharray: 0px 0px 0px 625px;
+  }
+  50% {
+    stroke-dasharray: 0px 0px 625px 0px;
+  }
+  100% {
+    stroke-dasharray: 0px 625px 0px 0px;
+  }
+}
